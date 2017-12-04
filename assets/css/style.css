@@ -15,7 +15,7 @@ body{
 
 header{
 	text-align: center;
-	border-bottom: #fff;
+	border-bottom: #fff dashed 1px;
 }
 
 header h1{
@@ -25,7 +25,7 @@ header h1{
 header p{
 	padding: 0px;
 	margin-top: 5px;
-	color: #000;
+	color: #f06226;
 }
 
 section{
@@ -34,4 +34,15 @@ section{
 
 footer{
 	text-align: center;
+}
+
+#results h3{
+	background: #f06226;
+	padding: 10px;
+	margin: 10px;
+}
+
+#results span{
+	color: #000;
+	font-weight: bold;
 }
