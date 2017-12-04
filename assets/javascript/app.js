@@ -1,3 +1,14 @@
+function countDown(secs, elem){
+	var element = document.getElementById(elem);
+	element.innerHTML = "You have "+secs+" seconds remaining";
+		if(secs < 0){
+			clearTimeout(timer);
+			alert('Out of time!');
+		}
+	secs--;
+	var timer = setTimeout('countDown('+secs+',"'+elem+'") ',1000);
+}
+
 function submitAnswers(){
 	var total = 5;
 	var score = 0;
@@ -21,24 +32,29 @@ function submitAnswers(){
 	var Answers = ["b", "b", "c", "d", "d"];
 
 	//Check Answers
-	if(q1 === answers[0]){
+	if(q1 === Answers[0]){
 		score++;
 	}
-	if(q2 === answers[1]){
+	if(q2 === Answers[1]){
 		score++;
 	}
-	if(q3 === answers[2]){
+	if(q3 === Answers[2]){
 		score++;
 	}
-	if(q4 === answers[3]){
+	if(q4 === Answers[3]){
 		score++;
 	}
-	if(q5 === answers[4]){
+	if(q5 === Answers[4]){
 		score++;
 	}
 
- 	
- 	//This alert is not working...
+	//Display Results
+	var results = document.getElementById('results');
+
+	results.innerHTML = '<h3>You scored <span>'+score+'</span> out of <span>'+total+'</span></h3>';
+
  	alert('You scored '+score+' out of '+total);
+
+ 	return false;
 
  }
